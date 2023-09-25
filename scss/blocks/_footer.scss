@@ -1,0 +1,170 @@
+.footer {
+  width: 100%;
+  background-color: $black;
+
+  &__top {
+    display: flex;
+    padding: 40px 0 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  &__nav {
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(2, 160px);
+      gap: 16px 105px;
+    }
+
+    &-link {
+      font-size: 20px;
+      font-weight: 300;
+      color: $white;
+      line-height: 1.5;
+      letter-spacing: 0.4px;
+    }
+  }
+
+  &__contacts {
+    width: 260px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    &-title {
+      font-size: 20px;
+      font-weight: 500;
+      color: $white;
+      line-height: 1.5;
+      letter-spacing: 0.4px;
+    }
+
+    &-email {
+      font-size: 18px;
+      font-weight: 400;
+      color: $beige;
+      line-height: 1.5;
+      letter-spacing: 0.36px;
+    }
+  }
+
+  &__bot {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__copyright {
+    margin-left: 15px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #5c5c5c;
+    line-height: 16px;
+  }
+
+  &__policy {
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #5c5c5c;
+    line-height: 16px;
+  }
+
+  &__social {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    column-gap: 58px;
+
+    &-link {
+      width: 48px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (hover: hover) {
+        &:hover {
+          svg {
+            fill: $beige;
+          }
+        }
+      }
+    }
+
+    &-tiktok {
+      width: 18px;
+      height: 21px;
+      fill: #5c5c5c;
+      transition: all 0.2s;
+    }
+
+    &-instagram {
+      width: 23px;
+      height: 22px;
+      fill: #5c5c5c;
+      transition: all 0.2s;
+    }
+
+    &-facebook {
+      width: 14px;
+      height: 22px;
+      fill: #5c5c5c;
+      transition: all 0.2s;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .footer {
+    &__contacts {
+      max-width: 200px;
+    }
+
+    &__social {
+      gap: 28px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    &__nav {
+      display: none;
+    }
+
+    &__contacts {
+      margin: 0;
+    }
+
+    &__top {
+      padding: 32px 0 20px;
+    }
+
+    &__bot {
+      padding: 11px 0 32px;
+      flex-direction: column;
+      row-gap: 16px;
+    }
+
+    &__logo {
+      display: none;
+    }
+
+    &__copyright {
+      order: 3;
+      margin: 0;
+    }
+
+    &__policy {
+      order: 2;
+      margin: 0;
+    }
+
+    &__social {
+      order: 1;
+      margin: 0;
+      gap: 59px;
+    }
+  }
+}

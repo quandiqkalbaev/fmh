@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- title -->
+    <title>Document</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="./css/swiper-boundle.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- Header Area Start -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="#">
+            <img class="" src="./images/logo.svg" alt="logo" />
+          </a>
+          <div class="header__menu">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Северный Кипр</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Польша</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Бесплатный тур</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">О нас</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__social">
+              <a class="header__social-link" href="#" target="_blank">
+                <svg class="header__social-whatsapp">
+                  <use xlink:href="./sprite.svg#whatsapp-icon"></use>
+                </svg>
+              </a>
+              <a class="header__social-link" href="#" target="_blank">
+                <svg class="header__social-telegram">
+                  <use xlink:href="./sprite.svg#telegram-icon"></use>
+                </svg>
+              </a>
+              <a class="header__social-link" href="#" target="_blank">
+                <svg class="header__social-viber">
+                  <use xlink:href="./sprite.svg#viber-icon"></use>
+                </svg>
+              </a>
+            </div>
+            <button class="header__btn">Свяжитесь с нами</button>
+            <div class="header__lang">
+              <div class="header__lang-top">
+                <span class="header__lang-current">ru</span>
+                <svg class="header__lang-icon">
+                  <use xlink:href="./sprite.svg#arrow-lang-icon"></use>
+                </svg>
+              </div>
+              <ul class="header__lang-list">
+                <li class="header__lang-item"><span>ru</span></li>
+                <li class="header__lang-item">pl</li>
+                <li class="header__lang-item">en</li>
+                <li class="header__lang-item">de</li>
+              </ul>
+            </div>
+          </div>
+          <div class="hamburger">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header Area End -->
+
+    <main>
+      <!-- Intro area Start -->
+      <section class="intro">
+        <div class="container">
+          <div class="intro__inner">
+            <h1 class="intro__title">Ваш помощник в покупке <span>недвижимости</span> в Варшаве или Северном Кипре</h1>
+            <div class="intro__bot">
+              <div class="intro__left">
+                <button class="intro__btn">
+                  Узнать больше
+                  <svg class="intro__btn-icon">
+                    <use xlink:href="./sprite.svg#arrow-right"></use>
+                  </svg>
+                </button>
+                <div class="intro__connection">
+                  <div class="intro__social">
+                    <a class="intro__social-link" href="#" target="_blank">
+                      <svg class="intro__social-whatsapp">
+                        <use xlink:href="./sprite.svg#whatsapp-icon"></use>
+                      </svg>
+                    </a>
+                    <a class="intro__social-link" href="#" target="_blank">
+                      <svg class="intro__social-telegram">
+                        <use xlink:href="./sprite.svg#telegram-icon"></use>
+                      </svg>
+                    </a>
+                    <a class="intro__social-link" href="#" target="_blank">
+                      <svg class="intro__social-viber">
+                        <use xlink:href="./sprite.svg#viber-icon"></use>
+                      </svg>
+                    </a>
+                    <span class="intro__social-close">
+                      <svg class="intro__social-close-icon">
+                        <use xlink:href="./sprite.svg#cancel-icon"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <button class="intro__connection-btn">
+                    <svg class="intro__connection-btn-icon">
+                      <use xlink:href="./sprite.svg#chat-major"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="intro__right" data-da=".intro__inner, 1024, 0">
+                <div class="intro__right-logo">
+                  <img class="intro__right-logo-img" src="./images/hp-intro/logo-secondary.svg" alt="logo" />
+                  <img class="intro__right-logo-text" src="./images/hp-intro/findmyhome-text.svg" alt="logo-text" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Intro area End -->
+
+      <!-- Advantages area Start -->
+      <!-- <section class="advantages">
+        <div class="container">
+          <div class="advantages__inner">
+            <div class="advantages__slider">
+              <div class="advantages__slider-wrapper swiper-wrapper">
+                <div class="advantages__slider-item swiper-slide item">
+                  <p
+                    class="advantages__title"
+                    data-da=".advantages__inner, 992, 0"
+                  >
+                    Наши преимущества
+                  </p>
+                  <h2
+                    class="advantages__subtitle"
+                    data-da=".advantages__inner, 992, 1"
+                  >
+                    Объекты, подходящие для покупки
+                  </h2>
+                  <div class="item__inner">
+                    <div class="item__front">
+                      <div class="item__front-top">
+                        <img
+                          class="item__front-img"
+                          src="./images/advantages/slide-img1.jpg"
+                          alt="slide-img"
+                        />
+                        <img
+                          class="item__front-icon"
+                          src="./images/advantages/icon-1.svg"
+                          alt="icon"
+                        />
+                      </div>
+                      <div class="item__front-bot">
+                        <h3 class="item__front-title">
+                          Находятся в «спросовых» локациях
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="item__back">
+                      <h3 class="item__back-title">
+                        Находятся в «спросовых» локациях
+                      </h3>
+                      <p
+                        class="item__back-text"
+                        data-da=".item__front-bot, 992, 1"
+                      >
+                        Локации имеют ценность для горожан и приезжих. Их в
+                        любой момент можно сдать или продать.
+                      </p>
+                      <a class="item__back-link" href="#"> Узнать больше </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="advantages__slider-item swiper-slide item">
+                  <div class="item__inner">
+                    <div class="item__front">
+                      <img
+                        class="item__front-img"
+                        src="./images/advantages/slide-img2.jpg"
+                        alt="slide-img"
+                      />
+                      <img
+                        class="item__front-icon"
+                        src="./images/advantages/icon-2.svg"
+                        alt="icon"
+                      />
+                      <h3 class="item__front-title">
+                        Находятся в «спросовых» локациях
+                      </h3>
+                    </div>
+                    <div class="item__back">
+                      <h3 class="item__back-title">
+                        Находятся в «спросовых» локациях
+                      </h3>
+                      <p
+                        class="item__back-text"
+                        data-da=".item__front-bot, 992, 1"
+                      >
+                        Локации имеют ценность для горожан и приезжих. Их в
+                        любой момент можно сдать или продать.
+                      </p>
+                      <a class="item__back-link" href="#"> Узнать больше </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="advantages__slider-item swiper-slide item">
+                  <div class="item__inner">
+                    <div class="item__front">
+                      <img
+                        class="item__front-img"
+                        src="./images/advantages/slide-img3.jpg"
+                        alt="slide-img"
+                      />
+                      <img
+                        class="item__front-icon"
+                        src="./images/advantages/icon-3.svg"
+                        alt="icon"
+                      />
+                      <h3 class="item__front-title">
+                        Находятся в «спросовых» локациях
+                      </h3>
+                    </div>
+                    <div class="item__back">
+                      <h3 class="item__back-title">
+                        Находятся в «спросовых» локациях
+                      </h3>
+                      <p
+                        class="item__back-text"
+                        data-da=".item__front-bot, 992, 1"
+                      >
+                        Локации имеют ценность для горожан и приезжих. Их в
+                        любой момент можно сдать или продать.
+                      </p>
+                      <a class="item__back-link" href="#"> Узнать больше </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- Advantages area End -->
+
+      <!-- Arguments area Start -->
+      <section class="arguments">
+        <div class="container">
+          <div class="arguments__inner">
+            <div class="arguments__info">
+              <p class="arguments__subtitle">Риэлтеров много, выбор сложный? Мы согласны.</p>
+              <h2 class="arguments__title">Есть 5 нерекламных <span> аргументов </span> в пользу нашей команды</h2>
+            </div>
+            <span class="arguments__pageicon"><img src="./images/arguments/page-icon.svg" alt="" /></span>
+            <div class="arguments__items">
+              <div class="arguments__item">
+                <div class="arguments__left">
+                  <div class="arguments__item-number"></div>
+                </div>
+                <div class="arguments__right">
+                  <p class="arguments__item-title">Путь от клиента к эксперту</p>
+                  <p class="arguments__item-text">
+                    Мы покупали недвижимость для личных целей и за несколько лет изучили рынок вдоль, поперёк и в
+                    глубину. Собрали информацию по каждому застройщику рынка. Выявили все подводные камни –
+                    застройщиков, законодательства, продавцов-посредников, обслуживающих ТСЖ. Нашли скрытые комиссии и
+                    основания для дополнительных платежей, с которыми невозможно поспорить. Мы прошли весь путь как
+                    клиенты рынка и стали максимально информированным участником.
+                  </p>
+                  <p class="arguments__item-showall">
+                    <span> <img src="./images/arguments/arrow-down.svg" alt="" /></span>Развернуть
+                  </p>
+                </div>
+              </div>
+              <div class="arguments__item">
+                <div class="arguments__left">
+                  <div class="arguments__item-number"></div>
+                </div>
+                <div class="arguments__right">
+                  <p class="arguments__item-title">Надежные застройщики</p>
+                  <p class="arguments__item-text">
+                    Принципиально не работаем со всеми застройщиками. У нас есть пул компаний, надёжность и деловая
+                    репутация которых прозрачна и подтверждена годами их работы.
+                  </p>
+                  <p class="arguments__item-showall">
+                    <span> <img src="./images/arguments/arrow-down.svg" alt="" /></span>Развернуть
+                  </p>
+                </div>
+              </div>
+              <div class="arguments__item">
+                <div class="arguments__left">
+                  <div class="arguments__item-number"></div>
+                </div>
+                <div class="arguments__right">
+                  <p class="arguments__item-title">Четкий анализ инвестиций</p>
+                  <p class="arguments__item-text">
+                    Работаем без длинных бесед и голословной рекламы. По каждому объекту предоставляем чек-лист с чётким
+                    описанием параметров застройщика, объекта, локации и факторов инвестиционной привлекательности в
+                    цифрах, позволяющих всесторонне оценить инвестицию до каких-либо платежей. <br /><br />
+                    Каждый объект, который мы предлагаем, юридически исследован, надёжность обоснована фактами и
+                    документами.
+                  </p>
+                  <p class="arguments__item-showall">
+                    <span> <img src="./images/arguments/arrow-down.svg" alt="" /></span>Развернуть
+                  </p>
+                </div>
+              </div>
+              <div class="arguments__item">
+                <div class="arguments__left">
+                  <div class="arguments__item-number"></div>
+                </div>
+                <div class="arguments__right">
+                  <p class="arguments__item-title">Полная прозрачность</p>
+                  <p class="arguments__item-text">
+                    Мы считаем затратную часть, выявляя и показывая все, абсолютно все, скрытые платежи, о которых
+                    агенты иногда случайно забывают сообщить. В наших документах вы видите истинную стоимость объекта.
+                  </p>
+                  <p class="arguments__item-showall">
+                    <span> <img src="./images/arguments/arrow-down.svg" alt="" /></span>Развернуть
+                  </p>
+                </div>
+              </div>
+              <div class="arguments__item">
+                <div class="arguments__left">
+                  <div class="arguments__item-number"></div>
+                </div>
+                <div class="arguments__right">
+                  <p class="arguments__item-title">Экономия времени и усилий</p>
+                  <p class="arguments__item-text">
+                    Мы сокращаем сроки и ваши усилия на получение ВНЖ, оформление детей в детсады и школы, получение
+                    водительских прав. А также удаленно согласовываем ипотеку. <br /><br />
+                    Тот объём вашего времени, которое вы потратите на изучение предложений для составления первичного
+                    пула объектов, мы уже потратили за вас. Вся информация, которую вы хотите видеть, уже подготовлена.
+                  </p>
+                  <p class="arguments__item-showall">
+                    <span> <img src="./images/arguments/arrow-down.svg" alt="" /></span>Развернуть
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Arguments area End -->
+
+      <!-- Feedback area Start -->
+      <section class="feedback">
+        <div class="container">
+          <div class="feedback__inner">
+            <p class="feedback__question">Хотите узнать больше?</p>
+            <h2 class="feedback__title">Свяжитесь с нами</h2>
+            <p class="feedback__subtitle">Оставьте заявку и мы свяжемся с вами в ближайшее время.</p>
+            <form class="feedback__form" action="#">
+              <div class="feedback__form-input-name">
+                <input class="feedback__form-name" type="text" name="name" autocomplete="off" required />
+                <span class="feedback__form-label">Имя</span>
+              </div>
+              <div class="feedback__form-input-tel">
+                <span class="feedback__form-flag">
+                  <img src="./images/feedback/flag.svg" alt="flag" />
+                </span>
+                <input class="feedback__form-tel" type="text" name="tel" value="+7" autocomplete="off" />
+              </div>
+              <div class="feedback__form-select">
+                <select class="feedback__form-communication" name="method-communication">
+                  <option selected disabled>Удобный способ связи</option>
+                  <option value="whatsapp">WhatsApp</option>
+                  <option value="telegram">Telegram</option>
+                  <option value="viber">Viber</option>
+                </select>
+              </div>
+              <div class="feedback__form-select">
+                <select class="feedback__form-location" name="method-location">
+                  <option selected disabled>Локация</option>
+                  <option value="moscow">Москва</option>
+                  <option value="northern-cyprus">Северный Кипр</option>
+                  <option value="warsaw">Варшава</option>
+                </select>
+              </div>
+              <div class="feedback__form-textarea">
+                <textarea class="feedback__form-textarea-message" name="message"></textarea>
+                <span class="feedback__form-label">Message</span>
+              </div>
+              <div class="feedback__form-checkbox">
+                <input class="feedback__form-checkbox-input" type="checkbox" />
+                <span class="feedback__form-checkbox-label">
+                  Я даю согласие на обработку моей личной информации в соответствии с Политикой конфиденциальности и
+                  использования файлов cookie.
+                </span>
+              </div>
+              <div class="feedback__caphca">
+                <img src="./images/feedback/capcha.png" alt="capcha" />
+              </div>
+              <button class="feedback__form-submit" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Feedback area End -->
+    </main>
+
+    <!-- Footer area Start -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__top">
+            <nav class="footer__nav">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#"> Северный Кипр </a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#"> Бесплатный тур </a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#"> Польша </a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#"> О нас </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="footer__contacts">
+              <span class="footer__contacts-title">Контакты</span>
+              <a class="footer__contacts-email" href="mailto:hello@findmyhome.pl"> hello@findmyhome.pl </a>
+            </div>
+          </div>
+          <div class="footer__bot">
+            <a class="footer__logo" href="#">
+              <img src="./images/footer-logo.svg" alt="logo" />
+            </a>
+            <p class="footer__copyright">© 2023 FindMyHome. All rights reserved.</p>
+            <a class="footer__policy" href="#"> Политикой обработки персональных данных </a>
+            <div class="footer__social">
+              <a class="footer__social-link" href="#">
+                <svg class="footer__social-tiktok">
+                  <use xlink:href="./sprite.svg#tiktok"></use>
+                </svg>
+              </a>
+              <a class="footer__social-link" href="#">
+                <svg class="footer__social-instagram">
+                  <use xlink:href="./sprite.svg#instagram"></use>
+                </svg>
+              </a>
+              <a class="footer__social-link" href="#">
+                <svg class="footer__social-facebook">
+                  <use xlink:href="./sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer area End -->
+
+    <!-- Js settings -->
+    <script src="./js/swiper-boundle.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

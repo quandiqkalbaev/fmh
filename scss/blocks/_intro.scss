@@ -1,0 +1,304 @@
+.intro {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../images/hp-intro/intro-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__inner {
+    height: 100vh;
+    padding: 120px 0 0;
+    position: relative;
+  }
+
+  &__title {
+    font-size: 78px;
+    font-weight: 300;
+    color: $white;
+    line-height: 1.2;
+    letter-spacing: -3.12px;
+
+    span {
+      font-family: "PT Serif";
+      font-size: 78px;
+      font-weight: 400;
+      font-style: italic;
+      color: $blue;
+      line-height: 1.2;
+    }
+  }
+
+  &__bot {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 96px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+  }
+
+  &__btn {
+    width: 312px;
+    max-width: 312px;
+    height: 65px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    color: $black;
+    line-height: 1.4;
+    letter-spacing: 0.36px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    background-color: $beige;
+
+    &-icon {
+      width: 20px;
+      height: 20px;
+      fill: $beige;
+    }
+  }
+
+  &__connection {
+    &-btn {
+      width: 65px;
+      height: 65px;
+      display: none;
+      align-items: center;
+      border: 1px solid rgba(206, 198, 189, 0.5);
+      border-radius: 50%;
+      position: relative;
+
+      &-icon {
+        width: 24px;
+        height: 24px;
+        fill: $white;
+        position: absolute;
+        left: 20px;
+        right: 21px;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+
+    &-link {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      border: 1px solid rgba(206, 198, 189, 0.5);
+      border-radius: 50%;
+      position: relative;
+    }
+
+    &-whatsapp {
+      width: 21px;
+      height: 21px;
+      fill: $white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &-telegram {
+      width: 18px;
+      height: 16px;
+      fill: $white;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 12px;
+      right: 14px;
+    }
+
+    &-viber {
+      width: 20px;
+      height: 22px;
+      fill: $white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &-close {
+      width: 20px;
+      height: 20px;
+      display: none;
+
+      &-icon {
+        width: 20px;
+        height: 20px;
+        fill: #a49c93;
+      }
+    }
+  }
+
+  &__right {
+    margin-left: auto;
+    &-logo {
+      display: flex;
+      align-items: center;
+      column-gap: 40px;
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media (max-width: 1170px) {
+  .intro {
+    &__right-logo {
+      column-gap: 25px;
+
+      &-img {
+        max-width: 70px;
+      }
+
+      &-text {
+        max-width: 245px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .intro {
+    &__inner {
+      padding: 40px 0 60px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__title {
+      margin-top: auto;
+      font-size: 58px;
+
+      span {
+        font-size: 58px;
+      }
+    }
+
+    &__bot {
+      margin-top: 32px;
+      position: relative;
+      left: auto;
+      right: 0;
+      bottom: auto;
+    }
+
+    &__right {
+      margin: 0;
+
+      &-logo {
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    &__title {
+      font-size: 44px;
+
+      span {
+        font-size: 44px;
+      }
+    }
+
+    &__btn {
+      max-width: 258px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .intro {
+    &__left {
+      width: 100%;
+    }
+
+    &__btn {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    &__connection {
+      &-btn {
+        display: flex;
+      }
+    }
+
+    &__social {
+      width: 100%;
+      height: 65px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      justify-content: center;
+      border-radius: 50px;
+      background-color: $beige;
+      z-index: 2;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+
+      &-link {
+        width: 45px;
+        height: 45px;
+        border-color: #b0a8a0;
+      }
+
+      &-whatsapp,
+      &-telegram,
+      &-viber {
+        fill: $black;
+      }
+
+      &-close {
+        position: absolute;
+        right: 20px;
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .intro {
+    &__right-logo {
+      column-gap: 20px;
+
+      &-img {
+        max-width: 50px;
+      }
+
+      &-text {
+        max-width: 215px;
+      }
+    }
+
+    &__title {
+      font-size: 42px;
+
+      span {
+        font-size: 42px;
+      }
+    }
+  }
+}

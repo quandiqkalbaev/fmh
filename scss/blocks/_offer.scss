@@ -1,0 +1,151 @@
+.offer {
+  padding: 96px 0 104px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  &__top {
+    display: flex;
+    column-gap: 136px;
+  }
+  &__left {
+    max-width: 536px;
+  }
+  &__subtitle {
+    color: #5c5c5c;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 180%;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+  }
+  &__title {
+    color: $white;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 115%;
+    span {
+      color: $beige;
+      font-family: PT Serif;
+      font-style: italic;
+    }
+  }
+  &__text {
+    margin-top: 25px;
+    color: $white;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 160%;
+    letter-spacing: 0.48px;
+  }
+  &__pageicon {
+    margin-left: auto;
+  }
+  &__bot {
+    margin-top: 24px;
+
+    &-block {
+      padding-top: 52px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      column-gap: 128px;
+      border-top: 1px solid $green;
+    }
+    &-info {
+      color: $white;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 150%;
+      letter-spacing: 0.12px;
+    }
+    &-life {
+      margin-top: 60px;
+      border-top: 1px solid $blue;
+    }
+  }
+  &__item {
+    display: grid;
+    grid-template-columns: 39px 1fr;
+    column-gap: 20px;
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+    &-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &-title {
+      color: $white;
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 125%;
+    }
+    &-text {
+      margin-top: 20px;
+      color: #919191;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 150%;
+      letter-spacing: 0.36px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .offer {
+    &__bot {
+      &-block {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .offer {
+    padding: 52px 0;
+    &__top {
+      flex-direction: column;
+      column-gap: 0;
+    }
+    &__left {
+      max-width: 100%;
+    }
+    &__title {
+      font-size: 48px;
+    }
+    &__pageicon {
+      margin-top: 52px;
+    }
+    &__bot {
+      margin-top: 20px;
+    }
+    &__item {
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
+      &-title {
+        font-size: 32px;
+      }
+      &-text {
+        margin-top: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .offer {
+    &__title{
+      font-size: 40px;
+    }
+    &__item {
+      column-gap: 10px;
+      &-title{
+        font-size: 28px;
+      }
+    }
+  }
+}
