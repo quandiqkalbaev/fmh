@@ -1,3 +1,7 @@
+import { useDynamicAdapt } from "./dynamicAdapt.js";
+
+useDynamicAdapt();
+
 try {
   // Burger Menu
   const hamburger = document.querySelector(".hamburger");
@@ -15,16 +19,16 @@ try {
   });
 } catch (e) {}
 
-try {
-  var advantagesSlider = new Swiper(".advantages__slider", {
-    slidesPerView: 3,
-    spaceBetween: 24,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-} catch (e) {}
+// try {
+//   var advantagesSlider = new Swiper(".advantages__slider", {
+//     slidesPerView: 3,
+//     spaceBetween: 24,
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//     },
+//   });
+// } catch (e) {}
 
 try {
   //arguments accordeon
