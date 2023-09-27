@@ -1,0 +1,13 @@
+@media (max-width: 1024px) {
+  .abouttext {
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      padding: 52px 16px;
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}

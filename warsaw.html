@@ -8,6 +8,7 @@
     <title>Document</title>
 
     <!-- style -->
+    <link rel="stylesheet" href="./css/swiper-boundle.min.css" />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
@@ -15,23 +16,23 @@
     <header class="header">
       <div class="container">
         <div class="header__inner">
-          <a class="header__logo" href="#">
+          <a class="header__logo" href="./index.html">
             <img class="" src="./images/logo.svg" alt="logo" />
           </a>
           <div class="header__menu">
             <nav class="nav">
               <ul class="nav__list">
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Северный Кипр</a>
+                  <a class="nav__link" href="./cyprus.html">Северный Кипр</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Польша</a>
+                  <a class="nav__link" href="./warsaw.html">Польша</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Бесплатный тур</a>
+                  <a class="nav__link" href="./free-tour.html">Бесплатный тур</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">О нас</a>
+                  <a class="nav__link" href="./about.html">О нас</a>
                 </li>
               </ul>
             </nav>
@@ -78,10 +79,15 @@
 
     <main>
       <!-- Intro area Start -->
-      <section class="intro">
+      <section class="intro intro-warsaw">
         <div class="container">
           <div class="intro__inner">
-            <h1 class="intro__title">Ваш помощник в покупке <span>недвижимости</span> в Варшаве или Северном Кипре</h1>
+            <div class="intro__top">
+              <h1 class="intro__title intro__title-warsaw">Варшава. Польша</h1>
+              <p class="intro__subtitle">
+                Мы <span>избавим</span> вас от нескольких недель скучных поисков подходящего варианта
+              </p>
+            </div>
             <div class="intro__bot">
               <div class="intro__left">
                 <button class="intro__btn">
@@ -131,6 +137,74 @@
         </div>
       </section>
       <!-- Intro area End -->
+
+      <!-- choice area Start -->
+      <section class="choice">
+        <div class="container">
+          <div class="choice__inner">
+            <div class="choice__items">
+              <div class="choice__slider-item">
+                <div class="choice__top" data-da=".choice__inner, 768, 0">
+                  <p class="choice__title">преимущества</p>
+                  <h2 class="choice__subtitle">Верный выбор жилья включает 4 основных параметра</h2>
+                </div>
+              </div>
+              <div class="choice__slider-item swiper-slide" data-da=".choice__slider-wrapper, 768, 0">
+                <img class="choice__slider-item-bg" src="./images/choice/item-bg.jpg" alt="" />
+                <div class="choice__slider-item-num"></div>
+                <h3 class="choice__slider-item-title">Безопасность</h3>
+                <p class="choice__slider-item-text">Надёжность и ответственность застройщика</p>
+              </div>
+              <div class="choice__slider-item swiper-slide" data-da=".choice__slider-wrapper, 768, 1">
+                <img class="choice__slider-item-bg" src="./images/choice/item-bg.jpg" alt="" />
+                <div class="choice__slider-item-num"></div>
+                <h3 class="choice__slider-item-title">Инфраструктура</h3>
+                <p class="choice__slider-item-text">
+                  Удовлетворяющая не только текущие запросы, но и изменения вашей жизни в перспективе
+                </p>
+              </div>
+              <div class="choice__slider-item swiper-slide" data-da=".choice__slider-wrapper, 768, 2">
+                <img class="choice__slider-item-bg" src="./images/choice/item-bg.jpg" alt="" />
+                <div class="choice__slider-item-num"></div>
+                <h3 class="choice__slider-item-title">Инвестиционная привлекательность</h3>
+                <p class="choice__slider-item-text">
+                  То есть жильё, стабильно растущее в цене, которое можно быстро продать при необходимости
+                </p>
+              </div>
+              <div class="choice__slider-item swiper-slide" data-da=".choice__slider-wrapper, 768, 3">
+                <img class="choice__slider-item-bg" src="./images/choice/item-bg.jpg" alt="" />
+                <div class="choice__slider-item-num"></div>
+                <h3 class="choice__slider-item-title">Эргономичность</h3>
+                <p class="choice__slider-item-text">Удобство планировок</p>
+              </div>
+              <div class="choice__slider-item">
+                <div class="choice__bot" data-da=".choice__inner, 768, 2">
+                  <div class="choice__bot-title">
+                    <span
+                      >Ваше жильё будет
+                      <span class="choice__bot-title-white">в полной мере</span>
+                      отвечать каждому параметру</span
+                    >
+
+                    <span>Остались вопросы?</span>
+                  </div>
+                  <a class="choice__link" href="#">
+                    <span>Узнать больше</span> <span>Напишите нам</span>
+                    <svg class="choice__link-icon">
+                      <use xlink:href="./sprite.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="choice__slider" data-da=".choice__inner, 768, 1">
+              <div class="choice__slider-wrapper swiper-wrapper"></div>
+              <div class="choice__slider-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- choice area End -->
 
       <!-- Unique area Start -->
       <section class="unique">
@@ -280,7 +354,7 @@
               <img src="./images/footer-logo.svg" alt="logo" />
             </a>
             <p class="footer__copyright">© 2023 FindMyHome. All rights reserved.</p>
-            <a class="footer__policy" href="#"> Политикой обработки персональных данных </a>
+            <a class="footer__policy" href="./policy.html"> Политикой обработки персональных данных </a>
             <div class="footer__social">
               <a class="footer__social-link" href="#">
                 <svg class="footer__social-tiktok">
@@ -304,6 +378,8 @@
     </footer>
     <!-- Footer area End -->
 
+    <!-- Js settings -->
+    <script src="./js/swiper-boundle.min.js"></script>
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>

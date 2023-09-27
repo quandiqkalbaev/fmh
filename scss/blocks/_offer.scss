@@ -1,5 +1,5 @@
 .offer {
-  padding: 96px 0 104px;
+  padding: 96px 0 444px;
   &__inner {
     display: flex;
     flex-direction: column;
@@ -105,7 +105,7 @@
 }
 @media (max-width: 768px) {
   .offer {
-    padding: 52px 0;
+    padding: 52px 0 382px;
     &__top {
       flex-direction: column;
       column-gap: 0;
@@ -138,12 +138,12 @@
 
 @media (max-width: 375px) {
   .offer {
-    &__title{
+    &__title {
       font-size: 40px;
     }
     &__item {
       column-gap: 10px;
-      &-title{
+      &-title {
         font-size: 28px;
       }
     }

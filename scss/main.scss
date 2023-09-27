@@ -31,14 +31,16 @@ body {
 @import "./blocks/feedback";
 @import "./blocks/footer";
 
-
 // --cyprus page
 @import "./blocks/policy";
+@import "./blocks/promo";
+@import "./blocks/faq";
 
 // --about page
 @import "./blocks/who";
 @import "./blocks/why";
 @import "./blocks/banner";
+@import "./blocks/abouttext";
 
 @import "./blocks/step";
 
@@ -47,3 +49,6 @@ body {
 @import "./blocks/price";
 
 @import "./blocks/offer";
+
+@import "./blocks/choice";
+@import "./blocks/benefits";

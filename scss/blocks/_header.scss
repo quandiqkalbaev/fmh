@@ -6,6 +6,14 @@
 
   transition: all 0.3s;
 
+  &-policy {
+    position: relative !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 1 !important;
+    background: #212121 !important;
+    top: 0;
+  }
   &__inner {
     display: flex;
     align-items: center;

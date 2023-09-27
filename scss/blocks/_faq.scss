@@ -1,0 +1,205 @@
+.faq {
+  width: 100%;
+  margin-top: -224px;
+  padding: 328px 0 104px;
+  background-color: $beige;
+
+  &__title {
+    font-size: 14px;
+    font-weight: 300;
+    color: #5c5c5c;
+    line-height: 1.8;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-size: 60px;
+    font-weight: 400;
+    color: $black;
+    line-height: 1.15;
+
+    span {
+      font-family: PT Serif;
+      font-size: 60px;
+      font-style: italic;
+      font-weight: 400;
+      color: $white;
+      line-height: 1.15;
+    }
+  }
+
+  &__slider {
+    overflow: hidden;
+    position: relative;
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-item {
+      height: auto;
+      padding: 40px;
+      border-radius: 32px;
+      border: 1px solid #b0a8a0;
+      &:first-of-type,
+      &:last-of-type {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        border: none;
+        border-radius: 0;
+      }
+
+      &-title {
+        font-size: 36px;
+        font-weight: 400;
+        color: $black;
+        line-height: 1.25;
+      }
+
+      &-text {
+        margin-top: 16px;
+        font-size: 18px;
+        font-weight: 300;
+        color: #5c5c5c;
+        line-height: 1.5;
+        letter-spacing: 0.36px;
+      }
+    }
+
+    &-pagination {
+      text-align: center;
+      display: none;
+
+      .swiper-pagination-bullet {
+        margin: 0 6px;
+        background: #b0a8a0 !important;
+      }
+
+      .swiper-pagination-bullet-active {
+        margin: 0 6px;
+        background: #212121 !important;
+      }
+    }
+  }
+
+  &__bot {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 40px;
+
+    &-title {
+      font-size: 36px;
+      font-weight: 400;
+      color: $black;
+      line-height: 1.25;
+      text-align: right;
+    }
+  }
+
+  &__link {
+    width: 312px;
+    max-width: 312px;
+    height: 65px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    color: $white;
+    line-height: 1.4;
+    letter-spacing: 0.36px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    background-color: $black;
+
+    &-icon {
+      width: 20px;
+      height: 20px;
+      fill: #a49c93;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .faq {
+    &__subtitle {
+      font-size: 48px;
+
+      span {
+        font-size: 48px;
+      }
+    }
+
+    &__slider {
+      &-item {
+        padding: 32px;
+
+        &-title {
+          font-size: 32px;
+          line-height: 1.2;
+        }
+      }
+    }
+
+    &__bot-title {
+      font-size: 32px;
+      line-height: 1.2;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .faq {
+    margin-top: -276px;
+    padding-bottom: 52px;
+
+    &__slider {
+      max-width: 100%;
+      margin: 32px auto 0;
+
+      &-wrapper {
+        display: flex;
+      }
+
+      &-item {
+        min-width: 285px;
+        padding: 32px 32px 56px;
+
+        &:first-of-type,
+        &:last-of-type {
+          display: none;
+        }
+      }
+
+      &-pagination {
+        position: absolute;
+        display: block;
+        bottom: 28px !important;
+      }
+    }
+
+    &__bot {
+      margin-top: 32px;
+      align-items: center;
+      row-gap: 24px;
+
+      &-title {
+        @media (max-width: 375px) {
+          font-size: 28px;
+        }
+      }
+    }
+
+    &__link {
+      @media (max-width: 375px) {
+        width: 100%;
+      }
+    }
+  }
+}

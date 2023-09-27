@@ -1,17 +1,44 @@
 .intro {
   width: 100%;
   height: 100vh;
-  background-image: url("../../images/hp-intro/intro-bg.jpg");
+  background-image: url("../../images/hp-intro/intro-bg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
+  &-about {
+    background-image: url("../../images/hp-intro/intro-about.webp");
+    padding-bottom: 104px;
+    height: 100%;
+  }
+  &-cyprus {
+    background-image: url("../../images/hp-intro/intro-cyprus.webp");
+  }
+  &-ft {
+    background-image: url("../../images/hp-intro/intro-ft.webp");
+  }
+  &-warsaw {
+    background-image: url("../../images/hp-intro/intro-warsaw.webp");
+  }
   &__inner {
     height: 100vh;
     padding: 120px 0 0;
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
-
+  &__top {
+    display: flex;
+    &-ft {
+      flex-direction: column;
+    }
+    &-right {
+      margin-left: 24px;
+      background-image: url("../../images/hp-intro/right-bg.svg");
+      width: 428px;
+      height: 454px;
+    }
+  }
   &__title {
     font-size: 78px;
     font-weight: 300;
@@ -21,14 +48,48 @@
 
     span {
       font-family: "PT Serif";
-      font-size: 78px;
       font-weight: 400;
       font-style: italic;
       color: $blue;
       line-height: 1.2;
     }
+    &-cyprus,
+    &-warsaw,
+    &-ft {
+      font-size: 84px;
+      line-height: 110%;
+      letter-spacing: -3.36px;
+      min-width: 424px;
+    }
+    &-about {
+      font-size: 60px;
+      line-height: 115%;
+      max-width: 648px;
+    }
+    &-ft {
+      min-width: 100%;
+    }
   }
-
+  &__subtitle {
+    max-width: 872px;
+    margin-left: 24px;
+    color: $white;
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 120%;
+    &-ft {
+      min-width: 100%;
+      margin-left: 0;
+      span {
+        display: block;
+      }
+    }
+    span {
+      color: $beige;
+      font-family: PT Serif;
+      font-style: italic;
+    }
+  }
   &__bot {
     position: absolute;
     left: 0;
@@ -36,6 +97,49 @@
     bottom: 96px;
     display: flex;
     align-items: center;
+    &-about {
+      align-items: flex-start;
+      position: relative;
+      bottom: auto;
+      padding-top: 31px;
+      margin-top: auto;
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: rgba(206, 198, 189, 0.2);
+        top: 0;
+        left: 0;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 536px;
+        height: 1px;
+        top: 0;
+        left: 0;
+        background: #cec6bd;
+      }
+    }
+    &-left {
+      color: $white;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 150%;
+      letter-spacing: 0.12px;
+    }
+    &-right {
+      max-width: 648px;
+      margin-left: 134px;
+      color: #919191;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 140%;
+      letter-spacing: 0.48px;
+    }
   }
 
   &__left {
@@ -151,6 +255,7 @@
 
   &__right {
     margin-left: auto;
+    display: none;
     &-logo {
       display: flex;
       align-items: center;
@@ -173,23 +278,61 @@
         max-width: 245px;
       }
     }
+    &__right {
+      margin: 0;
+      &-logo {
+        justify-content: space-between;
+      }
+    }
   }
 }
 
 @media (max-width: 1024px) {
   .intro {
+    padding-bottom: 0;
     &__inner {
       padding: 40px 0 60px;
       display: flex;
       flex-direction: column;
     }
 
+    &__top {
+      margin-top: auto;
+      flex-direction: column;
+      &-about {
+        margin-top: 52px;
+      }
+      &-right {
+        margin-left: auto;
+        margin-top: 77px;
+        width: 281px;
+        height: 278px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
     &__title {
       margin-top: auto;
       font-size: 58px;
-
+      &-cyprus,
+      &-warsaw {
+        font-size: 70px;
+      }
+      &-about {
+        font-size: 50px;
+      }
+    }
+    &__subtitle {
+      margin: 20px 0 0 0;
+      font-size: 40px;
       span {
-        font-size: 58px;
+        color: $blue;
+      }
+      &-ft {
+        span {
+          color: $beige;
+        }
       }
     }
 
@@ -199,11 +342,23 @@
       left: auto;
       right: 0;
       bottom: auto;
+      &-about {
+        background-color: $black;
+        margin-top: 0;
+        padding: 0;
+        &::after,
+        &::before {
+          display: none;
+        }
+      }
+      &-right {
+        margin-left: 0;
+      }
     }
 
     &__right {
       margin: 0;
-
+      display: block;
       &-logo {
         justify-content: space-between;
       }
@@ -215,10 +370,19 @@
   .intro {
     &__title {
       font-size: 44px;
+      min-width: 100%;
 
-      span {
-        font-size: 44px;
+      &-cyprus,
+      &-warsaw {
+        font-size: 61px;
       }
+      &-about {
+        font-size: 40px;
+      }
+    }
+    &__subtitle {
+      font-size: 32px;
+      min-width: 100%;
     }
 
     &__btn {
@@ -241,9 +405,9 @@
     &__connection {
       &-btn {
         display: flex;
+        cursor: auto;
       }
     }
-
     &__social {
       width: 100%;
       height: 65px;
@@ -257,7 +421,12 @@
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
-
+      transition: all 0.3s linear;
+      &--active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+      }
       &-link {
         width: 45px;
         height: 45px;
@@ -292,13 +461,16 @@
         max-width: 215px;
       }
     }
-
+    &__top {
+      &-right {
+        margin-top: 20px;
+      }
+    }
     &__title {
       font-size: 42px;
-
-      span {
-        font-size: 42px;
-      }
+    }
+    &__subtitle {
+      font-size: 28px;
     }
   }
 }
