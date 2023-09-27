@@ -7,7 +7,7 @@
     column-gap: 136px;
   }
   &__left {
-    max-width: 536px;
+    min-width: 536px;
   }
   &__title {
     color: $black;
@@ -78,7 +78,7 @@
       column-gap: 0;
     }
     &__left {
-      max-width: 100%;
+      min-width: 100%;
     }
     &__right {
       &-info {

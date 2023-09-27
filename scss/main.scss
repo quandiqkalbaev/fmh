@@ -32,23 +32,24 @@ body {
 @import "./blocks/footer";
 
 // --cyprus page
-@import "./blocks/policy";
+@import "./blocks/offer";
 @import "./blocks/promo";
 @import "./blocks/faq";
+@import "./blocks/price";
+@import "./blocks/step";
+@import "./blocks/banner";
+
+// --free-tour page
+@import "./blocks/benefits";
+
+// --policy page
+@import "./blocks/policy";
 
 // --about page
+@import "./blocks/abouttext";
 @import "./blocks/who";
 @import "./blocks/why";
-@import "./blocks/banner";
-@import "./blocks/abouttext";
 
-@import "./blocks/step";
-
-@import "./blocks/unique";
-
-@import "./blocks/price";
-
-@import "./blocks/offer";
-
+// --warsaw page
 @import "./blocks/choice";
-@import "./blocks/benefits";
+@import "./blocks/unique";

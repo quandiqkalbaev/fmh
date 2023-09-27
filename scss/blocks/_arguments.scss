@@ -84,18 +84,18 @@
   @for $i from 1 to 6 {
     &__item:nth-child(#{$i}) {
       .arguments__item-number {
-        background-image: url("../../images/arguments/n#{$i}-default.svg");
+        background-image: url("../images/arguments/n#{$i}-default.svg");
       }
     }
     &__item:nth-child(#{$i}) {
       .arguments__item-number--active {
-        background-image: url("../../images/arguments/n#{$i}-hover.svg");
+        background-image: url("../images/arguments/n#{$i}-hover.svg");
       }
     }
     @media (hover: hover) {
       &__item:nth-child(#{$i}):hover {
         .arguments__item-number {
-          background-image: url("../../images/arguments/n#{$i}-hover.svg");
+          background-image: url("../images/arguments/n#{$i}-hover.svg");
         }
       }
     }
