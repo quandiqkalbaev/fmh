@@ -95,12 +95,14 @@ try {
 
 try {
   //header fixed
-  let lastScrollTop = 0;
+  let lastScrollTop = 80;
   let navbar = document.querySelector(".header");
   const mobileScreenWidth = 1024;
 
   function toggleNavbarVisibility() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    console.log("scrolltop : " + scrollTop);
+    // console.log("lastscrolltop : " + scrollTop);
     if (window.innerWidth <= mobileScreenWidth) {
       navbar.style.opacity = scrollTop === 0 ? "0" : "1";
       navbar.style.visibilty = scrollTop === 0 ? "hidden" : "visible";
@@ -113,7 +115,7 @@ try {
         navbar.style.position = "fixed";
         navbar.style.background = scrollTop === 0 ? "transparent" : "#212121";
       }
-    } else if (scrollTop > lastScrollTop || lastScrollTop < 0 ) {
+    } else if (scrollTop > lastScrollTop) {
       navbar.style.opacity = "0";
       navbar.style.visibilty = "hidden";
       navbar.style.zIndex = -1;
