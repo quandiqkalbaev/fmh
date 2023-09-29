@@ -113,7 +113,7 @@ try {
         navbar.style.position = "fixed";
         navbar.style.background = scrollTop === 0 ? "transparent" : "#212121";
       }
-    } else if (scrollTop > lastScrollTop || lastScrollTop < 0 || scrollTop > 20 ) {
+    } else if (scrollTop > lastScrollTop || lastScrollTop < 0 ) {
       navbar.style.opacity = "0";
       navbar.style.visibilty = "hidden";
       navbar.style.zIndex = -1;
