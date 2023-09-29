@@ -95,19 +95,17 @@ try {
 
 try {
   //header fixed
-  let lastScrollTop = 80;
+  let lastScrollTop = 0;
   let navbar = document.querySelector(".header");
   const mobileScreenWidth = 1024;
 
   function toggleNavbarVisibility() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    console.log("scrolltop : " + scrollTop);
-    // console.log("lastscrolltop : " + scrollTop);
+    let scrollTop = document.documentElement.scrollTop;
+    console.log(scrollTop);
     if (window.innerWidth <= mobileScreenWidth) {
       navbar.style.opacity = scrollTop === 0 ? "0" : "1";
       navbar.style.visibilty = scrollTop === 0 ? "hidden" : "visible";
       navbar.style.zIndex = scrollTop === 0 ? -1 : 999;
-
       if (scrollTop > lastScrollTop) {
         navbar.style.top = "-80px";
       } else {
@@ -115,16 +113,20 @@ try {
         navbar.style.position = "fixed";
         navbar.style.background = scrollTop === 0 ? "transparent" : "#212121";
       }
-    } else if (scrollTop > lastScrollTop) {
-      navbar.style.opacity = "0";
-      navbar.style.visibilty = "hidden";
-      navbar.style.zIndex = -1;
-    } else {
-      navbar.style.opacity = "1";
-      navbar.style.visibilty = "visible";
-      navbar.style.zIndex = 9999;
-      navbar.style.position = "fixed";
-      navbar.style.background = scrollTop === 0 ? "transparent" : "#212121";
+    } else if (scrollTop > 80) {
+      if (scrollTop > lastScrollTop) {
+        navbar.style.opacity = "0";
+        navbar.style.visibilty = "hidden";
+        navbar.style.zIndex = -1;
+      } else {
+        navbar.style.opacity = "1";
+        navbar.style.visibilty = "visible";
+        navbar.style.zIndex = 9999;
+        navbar.style.position = "fixed";
+        navbar.style.background = scrollTop === 0 ? "transparent" : "#212121";
+      }
+    } else if (scrollTop <= 80) {
+  navbar.style.background="transparent"
     }
     lastScrollTop = scrollTop;
   }
