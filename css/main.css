@@ -239,9 +239,10 @@ body {
 }
 .header__social {
   margin-left: auto;
-  display: flex;
+  display: none;
   align-items: center;
   column-gap: 16px;
+  transition: all 300ms linear;
 }
 .header__social-link {
   width: 44px;
@@ -284,7 +285,7 @@ body {
   width: 100%;
   max-width: 197px;
   height: 44px;
-  margin-left: 24px;
+  margin-left: auto;
   padding: 12px 0;
   font-size: 14px;
   font-weight: 500;
@@ -415,6 +416,9 @@ body {
 .header .hamburger--active span::after {
   transform: translate(-6px, 0) rotate(-45deg);
 }
+.header__contacts, .header__policy, .header__rights, .header__burger-social {
+  display: none;
+}
 
 @media (max-width: 1170px) {
   .header .nav__list {
@@ -447,6 +451,10 @@ body {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
+    height: 100vh;
+  }
+  .header .nav {
+    order: 0;
   }
   .header .nav__list {
     flex-direction: column;
@@ -457,13 +465,62 @@ body {
     letter-spacing: 0.72px;
   }
   .header__social {
-    margin: 100px auto 0;
+    display: flex !important;
+    margin: 75px auto 0;
+    order: 2;
   }
   .header__lang {
-    display: none;
+    order: 1;
+    display: block;
+    margin: 32.5px 0 0 0;
   }
   .header__btn {
     display: none;
+  }
+  .header__contacts {
+    display: block;
+    order: 3;
+    margin-top: 32px;
+    padding: 32px 0 20px;
+    border-top: 1px solid var(--beige-20, rgba(206, 198, 189, 0.2));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    width: 100%;
+  }
+  .header__contacts-title {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.4px;
+    align-self: flex-start;
+  }
+  .header__contacts-mail {
+    margin-top: 16px;
+    display: block;
+    color: #cec6bd;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.36px;
+  }
+  .header__policy, .header__rights {
+    display: block;
+    order: 4;
+    margin-top: 16px;
+    color: #5c5c5c;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16px;
+  }
+  .header__rights {
+    order: 5;
+  }
+  .header__burger-social {
+    margin-top: 11px;
+    order: 3;
+    display: flex;
+    column-gap: 59px;
   }
   .header .hamburger {
     display: flex;

@@ -97,11 +97,26 @@ try {
   //header fixed
   let lastScrollTop = 0;
   let navbar = document.querySelector(".header");
+  let socials = document.querySelector(".header__social");
+  let headerBTN = document.querySelector(".header__btn");
   const mobileScreenWidth = 1024;
+  let langlist = document.querySelector(".header__lang-list");
+  let langBtn = document.querySelector(".header__lang-top");
+  //lang settings js
+  function handleClickOutside(event) {
+    if (!langBtn.contains(event.target) && !langlist.contains(event.target)) {
+      langlist.classList.remove("header__lang-list--active");
+    }
+  }
+
+  langBtn.addEventListener("click", () => {
+    langlist.classList.add("header__lang-list--active");
+  });
+
+  document.addEventListener("click", handleClickOutside);
 
   function toggleNavbarVisibility() {
     let scrollTop = document.documentElement.scrollTop;
-    console.log(scrollTop);
     if (window.innerWidth <= mobileScreenWidth) {
       navbar.style.opacity = scrollTop === 0 ? "0" : "1";
       navbar.style.visibilty = scrollTop === 0 ? "hidden" : "visible";
@@ -113,20 +128,44 @@ try {
         navbar.style.position = "fixed";
         navbar.style.background = scrollTop === 0 ? "transparent" : "#212121";
       }
-    } else if (scrollTop > 80) {
+    } else if (scrollTop <= 80) {
+      navbar.style.background = "transparent";
+      socials.style.display = "none";
+      headerBTN.style.marginLeft = "auto";
+    } else if (scrollTop > 80 && scrollTop <= 900) {
       if (scrollTop > lastScrollTop) {
+        socials.style.display = "none";
+        headerBTN.style.marginLeft = "auto";
         navbar.style.opacity = "0";
         navbar.style.visibilty = "hidden";
         navbar.style.zIndex = -1;
       } else {
+        socials.style.display = "none";
+        headerBTN.style.marginLeft = "auto";
         navbar.style.opacity = "1";
         navbar.style.visibilty = "visible";
         navbar.style.zIndex = 9999;
         navbar.style.position = "fixed";
         navbar.style.background = scrollTop === 0 ? "transparent" : "#212121";
       }
-    } else if (scrollTop <= 80) {
-  navbar.style.background="transparent"
+    } else if (scrollTop > 900) {
+      if (scrollTop > lastScrollTop) {
+        navbar.style.opacity = "0";
+        navbar.style.visibilty = "hidden";
+        navbar.style.zIndex = -1;
+        socials.style.display = "none";
+        headerBTN.style.marginLeft = "auto";
+      } else {
+        socials.style.display = "flex";
+        socials.style.marginLeft = "auto";
+        headerBTN.style.marginLeft = "24px";
+
+        navbar.style.opacity = "1";
+        navbar.style.visibilty = "visible";
+        navbar.style.zIndex = 9999;
+        navbar.style.position = "fixed";
+        navbar.style.background = scrollTop === 0 ? "transparent" : "#212121";
+      }
     }
     lastScrollTop = scrollTop;
   }

@@ -45,9 +45,10 @@
 
   &__social {
     margin-left: auto;
-    display: flex;
+    display: none;
     align-items: center;
     column-gap: 16px;
+    transition: all 300ms linear;
 
     &-link {
       width: 44px;
@@ -95,7 +96,7 @@
     width: 100%;
     max-width: 197px;
     height: 44px;
-    margin-left: 24px;
+    margin-left: auto;
     padding: 12px 0;
     font-size: 14px;
     font-weight: 500;
@@ -156,12 +157,10 @@
       flex-direction: column;
       position: absolute;
       left: -15px;
-      // transform: translateY(3.5px);
       border-radius: 12px;
       background-color: #313131;
       box-shadow: 0px 8px 20px 0px #0c0c0f;
       transition: all 0.2s;
-
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
@@ -171,6 +170,7 @@
         visibility: visible;
         pointer-events: all;
       }
+      
     }
 
     &-item {
@@ -251,6 +251,13 @@
       }
     }
   }
+
+  &__contacts,
+  &__policy,
+  &__rights,
+  &__burger-social {
+    display: none;
+  }
 }
 
 @media (max-width: 1170px) {
@@ -291,10 +298,12 @@
         opacity: 1;
         visibility: visible;
         pointer-events: all;
+        height: 100vh;
       }
     }
 
     .nav {
+      order: 0;
       &__list {
         flex-direction: column;
         row-gap: 32px;
@@ -307,17 +316,67 @@
     }
 
     &__social {
-      margin: 100px auto 0;
+      display: flex !important;
+      margin: 75px auto 0;
+      order: 2;
     }
 
     &__lang {
-      display: none;
+      order: 1;
+      display: block;
+      margin: 32.5px 0 0 0;
     }
 
     &__btn {
       display: none;
     }
+    &__contacts {
+      display: block;
+      order: 3;
+      margin-top: 32px;
+      padding: 32px 0 20px;
+      border-top: 1px solid var(--beige-20, rgba(206, 198, 189, 0.2));
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      width: 100%;
+      &-title {
+        color: $white;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: 0.4px;
+        align-self: flex-start;
+      }
+      &-mail {
+        margin-top: 16px;
+        display: block;
+        color: $beige;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.36px;
+      }
+    }
+    &__policy,
+    &__rights {
+      display: block;
 
+      order: 4;
+      margin-top: 16px;
+      color: #5c5c5c;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 16px;
+    }
+    &__rights {
+      order: 5;
+    }
+    &__burger-social {
+      margin-top: 11px;
+      order: 3;
+      display: flex;
+      column-gap: 59px;
+    }
     .hamburger {
       display: flex;
     }
